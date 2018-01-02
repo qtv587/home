@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>放大镜~</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: #3C8FC1;
+    }
+
+    #box {
+        position: relative;
+        width: 900px;
+        height: 350px;
+        background: url("images/bg.jpg");
+        margin: 100px auto;
+    }
+
+    #box .upload {
+        font-size: 0;
+        position: absolute;
+        left: 57px;
+        bottom: 31px;
+        width: 400px;
+        height: 120px;
+        background: #ccc;
+    }
+
+    #box .show {
+        right: 57px;
+        top: 31px;
+        position: absolute;
+        width: 284px;
+        height: 284px;
+        border: 1px solid red;
+    }
+
+    .show img {
+        height: 284px;
+    }
+
+    #box .upload .file {
+        border: 1px solid #aaaaaa;
+        border-right: 0;
+        margin: 10px;
+        margin-right: 0;
+        float: left;
+        width: 100px;
+        height: 100px;
+        background: url("images/img.png") no-repeat center;
+    }
+
+    #box .upload .text {
+        border: 1px solid #aaaaaa;
+        margin-top: 10px;
+        float: left;
+        width: 280px;
+        height: 100px;
+        background-color: #fff;
+    }
+
+    .file input {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+    }
+
+    .text input {
+        font-size: 35px;
+        border: 0;
+        width: 280px;
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div id="box">
+        <div class="upload">
+            <div class="file">
+                <input type="file" onchange="upload(this)">
+            </div>
+            <div class="text">
+                <input type="text" id="imgname">
+            </div>
+        </div>
+        <div class="show">
+            <img src="" id="img">
+        </div>
+    </div>
+    <script src="js/magnifier.js"></script>
+    <script type="text/javascript">
+        var imgname = document.getElementById("imgname");
+        var img = document.getElementById("img");
+        function upload(obj) {
+            // console.log(obj.files[0].name);
+            imgname.value = obj.files[0].name;
+            var url = window.URL.createObjectURL(obj.files[0]);
+            img.src = url;
+            img.setAttribute("bigsrc", img.src);
+        }
+    </script>
+</body>
+
+</html>
