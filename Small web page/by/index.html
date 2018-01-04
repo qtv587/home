@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    blockquote,
+    body,
+    button,
+    dd,
+    dl,
+    dt,
+    fieldset,
+    form,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    input,
+    legend,
+    li,
+    ol,
+    p,
+    pre,
+    td,
+    textarea,
+    th,
+    ul {
+        margin: 0;
+        padding: 0
+    }
+
+    .cl {
+        clear: both;
+    }
+
+    .header {
+        height: 58px;
+        background-color: #191D3A;
+    }
+
+    .inner_c {
+        width: 1001px;
+        margin: 0 auto;
+    }
+
+    body {
+        height: 5555px;
+        font-size: 14px;
+        font-family: "Microsoft YaHei", "SimSun"
+    }
+
+    .inner_c .log {
+        float: left;
+        height: 58px;
+        margin-right: 33px;
+    }
+
+    .header .nav {
+        float: left;
+    }
+
+    .inner_c ul {
+        list-style: none;
+    }
+
+    .inner_c .nav ul li {
+        float: left;
+        width: 100px;
+        line-height: 58px;
+        border-left: 1px solid #252947;
+        text-align: center;
+    }
+
+    .nav ul li.last {
+        border-right: 1px solid #252947;
+    }
+
+    .nav ul li a {
+        display: block;
+        height: 58px;
+        color: #818496;
+        text-decoration: none;
+    }
+
+    .nav ul li a:hover {
+        background-color: #252947;
+        color: white;
+    }
+
+    .header .nav ul li a.first {
+        background-color: #252947;
+        color: white;
+    }
+
+    .inner_c .join_box {
+        float: left;
+        padding-left: 48px;
+        padding-top: 12px;
+    }
+
+    .banner {
+        background: url(images/banner.jpg) no-repeat center top;
+        height: 465px;
+
+    }
+
+    .content .protect {
+        padding-top: 50px;
+        height: 229px;
+        border-bottom: 1px solid #DBE1E7;
+    }
+
+    .content .protect li {
+        float: left;
+        margin-right: 43px;
+
+    }
+
+    .content .protect ul li h3 {
+        text-align: center;
+        line-height: 59px;
+        font-size: 16px;
+    }
+
+    .content ul li.last {
+        margin: 0;
+    }
+
+    .content img {
+        width: 218px;
+        height: 130px;
+    }
+
+    .content .protect ul li p.djbf a {
+        text-decoration: none;
+        color: #38B774;
+        padding-right: 11px;
+        background: url(images/sjx.png) no-repeat right 5px;
+    }
+
+    .content .protect ul li p.djbf {
+        text-align: center;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .mouton {
+        background: url(images/indexmainbg.jpg) no-repeat -120px;
+        height: 53px;
+    }
+
+    .content .news {
+        margin-top: 53px;
+    }
+
+    .content .news .news1 {
+        width: 501px;
+        float: left;
+        background: url(images/bynews1bg.jpg) no-repeat;
+    }
+
+    .content .news .news1 .byxw {
+        height: 119px;
+        width: 502px;
+    }
+
+    .content .news .news1 ul li {
+        width: 459px;
+        line-height: 49px;
+        display: block;
+        list-style: none;
+        border-bottom: 1px solid #D6D6D6;
+        margin-left: 21px;
+    }
+
+    .content .news .news1 ul li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .content .news .news1 ul li a:hover {
+        color: #6FDEA3;
+    }
+
+    .content .news .news1 ul li span {
+        color: #CAC4CF;
+        padding-right: 22px;
+    }
+
+    .content .news .news2 {
+        color: white;
+        width: 500px;
+        height: 310px;
+        float: left;
+        background: url(images/bynews2.jpg) no-repeat;
+    }
+
+    .content .news .news2 h1 {
+        padding-left: 80px;
+        padding-top: 32px;
+        font-size: 28px;
+        line-height: 42px;
+    }
+
+    .content .news .news2 p.english {
+
+        padding-left: 80px;
+    }
+
+    .content .news .news2 h3 {
+        padding-bottom: 16px;
+        line-height: 100%;
+        padding-top: 23px;
+        padding-left: 20px;
+    }
+
+    .content .news .news2 li {
+        display: block;
+        line-height: 37px;
+        width: 305px;
+        padding-left: 20px;
+        border-bottom: 1px solid #6FDEA3;
+    }
+
+    .content .news .news2 li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .dibu_box {
+        height: 91px;
+        background-color: #191D3A;
+    }
+
+    .dibu {
+        height: 91px;
+        /* background-color: #191D3A; */
+        color: #6C6E7E;
+        line-height: 91px;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+
+    .dibu li {
+        float: left;
+        padding-right: 20px;
+    }
+
+    .dibu li.first {
+        padding-left: 6px;
+    }
+
+    .dibu span {
+        float: left;
+        padding-left: 92px;
+    }
+    .dibu a{
+        vertical-align: middle;
+    }
+
+    .dibu a img {
+        float: left;
+        width: 36px;
+        height: 50px;
+            }
+</style>
+
+<body>
+    <div class="header">
+        <div class="inner_c">
+            <h1 class="log">
+                <img src="images/log.png" alt="logo">
+            </h1>
+            <div class="nav">
+
+                <ul>
+                    <li>
+                        <a href="#" class="first">首页</a>
+                    </li>
+                    <li>
+                        <a href="#">博雅游戏</a>
+                    </li>
+                    <li>
+                        <a href="#">博雅新闻</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="#">客服中心</a>
+                    </li>
+                    <li class="last">
+                        <a href="#">投资者关系</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="join_box">
+                <a href="#">
+                    <img src="images/join.png" alt="加入我们">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div class="banner"></div>
+    <div class="content">
+
+        <div class="protect inner_c">
+            <ul>
+                <li>
+                    <img src="images/pro1.jpg" alt="">
+                    <h3>BPT宣传片</h3>
+                    <p class="djbf">
+                        <a href="#">点击播放</a>
+                    </p>
+                </li>
+                <li>
+                    <img src="images/pro2.jpg" alt="">
+                    <h3>博雅互动宣传视频</h3>
+                    <p class="djbf">
+                        <a href="#">点击播放</a>
+                    </p>
+                </li>
+                <li>
+                    <img src="images/pro3.jpg" alt="">
+                    <h3>斗地主</h3>
+                    <p class="djbf">
+                        <a href="#">点击播放</a>
+                    </p>
+                </li>
+                <li class="last">
+                    <img src="images/pro4.jpg" alt="">
+                    <h3>德州扑克</h3>
+                    <p class="djbf">
+                        <a href="#">点击播放</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="cl"></div>
+        <div class="news inner_c">
+            <div class="news1">
+                <h1 class="byxw">
+                    <img src="" alt="">
+                </h1>
+                <ul class="xw">
+                    <li>
+                        <span>09 / 28</span>
+                        <a href="#" class="first">2015博雅国际扑克大赛（BPT）在澳门落幕</a>
+                    </li>
+                    <li>
+                        <span>09 / 28</span>
+                        <a href="#">2015 BPT博雅国际扑克大赛重磅来袭</a>
+                    </li>
+                    <li>
+                        <span>09 / 28</span>
+                        <a href="#">博雅互动与阿里游戏联手启动"淘宝杯首届电视棋牌大赛"</a>
+                    </li>
+                    <li>
+                        <span>09 / 28</span>
+                        <a href="#">湖南省省长杜家豪参观博雅互动</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="news2">
+                <h1>专职招聘</h1>
+                <p class="english">BOYAA JOBS</p>
+                <h3 class="zp">
+                    专场招聘岗位
+                </h3>
+                <ul zy>
+                    <li>
+                        <p>
+                            <a href="">PHP 开发工程师</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="">C++开发工程师</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="">WEB前端开发工程师</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="">大数据开发工程师</a>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cl"></div>
+    <div class="mouton inner_c"></div>
+    <div class="cl"></div>
+
+    <div class="dibu_box">
+        <div class="dibu inner_c">
+            <ul>
+                <li class="first">网站地图</li>
+                <li>免责声明</li>
+            </ul>
+            <span>Copyeight © 2004-2014 博雅互动(Boyaa Interactive) 粤ICp备05062536号 增值电信业务经营许可证：粤B2-20110513</span>
+            <a href="#">
+                <img src="images/govIcon.gif" alt="徽章">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
